@@ -15,6 +15,12 @@ body {
   background-color: #fff;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+
 nav{
   font-family: 'Nunito', sans-serif;
 }
@@ -33,32 +39,75 @@ main.page-wrapper { margin-top: 6rem; }  /* base */
 
 /* Navigation */
 nav{
-  height: 70px;
+  height: 80px;
   line-height: 40px;
 }
 
 .nav-site {
   background-color: #2C6777;
-  padding-block: 1rem;
 }
 
-.nav-site ul {
+.nav-inner { 
   display: flex;
-  justify-content: space-between;
+  padding-inline: 0;
   align-items: center;
-  list-style: none;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 24px);
 }
 
-.nav-site a {
+.nav-left-group{
+  display: flex; 
+  align-items: center;
+  flex: 1 1 auto;
+  gap: 2rem;
+}
+
+.logo { 
+  display: flex; 
+  align-items: center;
+  margin-left: 0px;
+}
+
+.logo img{
+  height: 65px;
+  width: auto;
+}
+
+.nav-links ul{
+  display: flex;
+  align-items: center;
+  gap: 2rem;                 
+  list-style: none;          
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 300;
+  position: relative;
+  padding-block: 0.25rem;
 }
 
 .nav-site a[aria-current="page"] {
   font-weight: 600;
   border-bottom: 2px solid #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 54px;
+  width: auto;
+  display: block;
 }
 
 /* Main Section */
@@ -78,13 +127,30 @@ nav{
   gap: 0.5rem;                    
 }
 
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .intro h1 {
   font-size: 2.25rem;
-  font-weight: 700;
+  margin: 0;
+}
+
+.about h1{
+  font-size: 2.25rem;
   margin: 0;
 }
 
 .intro p {
+  line-height: 1.6;
+  margin: 0;
+  max-width: 500px;
+}
+
+.about p {
   line-height: 1.6;
   margin: 0;
   max-width: 500px;
@@ -140,9 +206,7 @@ nav{
 /* Mobile (<768px) */
 @media (max-width: 767px) {
   .nav-site ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
+    display: none;
   }
 
   .main-section {
@@ -165,7 +229,7 @@ nav{
   .socials { justify-content: center; }
 }
 
-/* wave pinned to the viewport bottom */
+/* wave pinned to the bottom of viewport */
 .page-wave {
   position: absolute;
   bottom: 0;
