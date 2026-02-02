@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 300;
   color: #0b0e11;
   background-color: #fff;
@@ -381,7 +381,7 @@ nav {
 
 .experience-company,
 .projects-company {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
@@ -505,7 +505,7 @@ nav {
 
 .experience-panel-left h2,
 .projects-panel-left h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
