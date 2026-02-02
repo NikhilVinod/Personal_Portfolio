@@ -336,9 +336,7 @@ nav {
   align-items: center;
   position: relative;
 
-  height: clamp(240px, 22vw, 340px);
-  max-height: 320px;
-
+  height: 280px;
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
@@ -376,6 +374,7 @@ nav {
   font-size: 1rem;
   font-weight: 400;
   color: #555;
+  padding-top: 0.5rem;
   text-align: center;
 }
 
@@ -395,11 +394,13 @@ nav {
   border-radius: 22px;
   box-shadow: 0 12px 28px rgba(12, 23, 38, 0.12);
   overflow: hidden;
-
+  position: relative;
   /* hidden by default */
   display: none;
   opacity: 0;
   transform: translateY(8px);
+
+  padding: 20px 0px;
 
   transition: opacity 180ms ease, transform 180ms ease;
 }
@@ -410,34 +411,30 @@ nav {
   transform: translateY(0);
 }
 
-/* Top bar with back button */
-.experience-panel-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.2rem 0.25rem;
-}
-
 .experience-panel-back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
-  border: 2px solid #e1e7ed;
-  background: #fff;
-  color: #2C6777;
-  border-radius: 12px;
-  padding: 0.4rem 0.9rem;
+
+  border: none;
+  background: #d7d7d7;
+  color: #ffffff;
+
+  border-radius: 50%;
+  padding: 0.4rem 0.6rem;
+
   cursor: pointer;
+  z-index: 2;
+
   transition: transform 150ms ease, background 150ms ease;
 }
 
 .experience-panel-back:hover {
   transform: translateY(-1px);
   background: #f6f9fb;
-}
-
-.experience-panel-hint {
-  font-size: 0.95rem;
-  color: #6b7a8d;
 }
 
 .experience-panel-inner {
