@@ -583,7 +583,7 @@ nav {
   top: var(--space-md);
   left: var(--space-md);
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: 1.35rem;
   border: none;
   background: var(--color-button-ghost);
   color: var(--color-nav-text);
@@ -597,7 +597,7 @@ nav {
 .experience-panel-back:hover,
 .projects-panel-back:hover {
   transform: translateY(-1px);
-  background: var(--color-button-ghost-hover);
+  background: #b0b0b0;
 }
 
 .experience-panel-back:focus-visible,
