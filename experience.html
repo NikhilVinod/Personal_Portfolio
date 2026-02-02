@@ -6,20 +6,21 @@
     <title>Experience</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="experience-page">
 
     <nav class="nav-site">
         <div class="nav-inner">
             <div class="nav-left-group">
                 <div class="logo">
-                    <img src="img/logo.svg" alt="NV Logo">
+                    <img src="img/logos/logo.svg" alt="NV Logo">
                 </div>
 
                 <div class="nav-links">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
-                        <li><a href="experience.html"  aria-current="page">Experience</a></li>
+                        <!-- aria-current moved here so "Experience" is highlighted -->
+                        <li><a href="experience.html" aria-current="page">Experience</a></li>
                         <li><a href="projects.html">Projects</a></li>
                     </ul>
                 </div>
@@ -28,6 +29,73 @@
             <a class="resume-btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
     </nav>
-    
+
+    <main class="page-wrapper">
+        <section class="experience-section">
+            <h1>Experience</h1>
+
+            <div class="experience-grid">
+                <!-- Card 1 -->
+                <article class="experience-card">
+                    <img src="img/logos/wayLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
+                    <h2 class="experience-company">JIFFY.ai</h2>
+                    <p class="experience-role">SWE Intern</p>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed the complete investment account opening journey for Finley mobile app using Flutter for various account types (Individual, Joint, IRA, Education)</li>
+                            <li>Integrated various third party tools like Plaid for data aggregation, Google Places API for address autocomplete functionality, and Twilio for phone verification</li>
+                            <li>Implemented AWS Lambda functions for serverless third party API integration</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="experience-card">
+                    <img src="img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
+                    <h2 class="experience-company">JIFFY.ai</h2>
+                    <p class="experience-role">SWE Intern</p>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed the complete investment account opening journey for Finley mobile app using Flutter for various account types (Individual, Joint, IRA, Education)</li>
+                            <li>Integrated various third party tools like Plaid for data aggregation, Google Places API for address autocomplete functionality, and Twilio for phone verification</li>
+                            <li>Implemented AWS Lambda functions for serverless third party API integration</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="experience-card">
+                    <img src="img/logos/bhailogLogo.svg" alt="Bhailog logo" class="experience-logo">
+                    <h2 class="experience-company">Bhailog</h2>
+                    <p class="experience-role">UI/UX Designer</p>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Designed user interfaces and user experience flows for the Bhailog platform</li>
+                            <li>Created wireframes, prototypes, and high-fidelity mockups using Figma</li>
+                            <li>Collaborated with the development team to ensure design consistency across the application</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="experience-card">
+                    <img src="img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
+                    <h2 class="experience-company">JIFFY.ai</h2>
+                    <p class="experience-role">SWE Intern</p>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed the complete investment account opening journey for Finley mobile app using Flutter for various account types (Individual, Joint, IRA, Education)</li>
+                            <li>Integrated various third party tools like Plaid for data aggregation, Google Places API for address autocomplete functionality, and Twilio for phone verification</li>
+                            <li>Implemented AWS Lambda functions for serverless third party API integration</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <img src="img/elements/wave.svg" alt="" class="page-wave">
+
+    <script src="script.js" defer></script>
 </body>
 </html>
