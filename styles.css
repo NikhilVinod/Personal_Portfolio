@@ -365,17 +365,14 @@ nav {
 .experience-company {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0.25rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
 .experience-role {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #555;
-  padding-top: 0.5rem;
-  text-align: center;
+  display: none; /* hide on cards; used only in panel */
 }
 
 /* Keep descriptions hidden in cards (panel uses them as data) */
@@ -448,6 +445,7 @@ nav {
   min-width: 260px;
   padding-right: 2rem;
   border-right: 2px solid #e1e7ed;
+  align-self: stretch;
 
   display: flex;
   flex-direction: column;
@@ -464,7 +462,7 @@ nav {
 .experience-panel-left h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 0.25rem;
   text-align: center;
 }
@@ -483,11 +481,27 @@ nav {
   flex-direction: column;
 }
 
-.experience-panel-dates {
+.experience-panel-meta {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 0.9rem;
+}
+
+.experience-panel-role {
   font-size: 1rem;
-  font-weight: 450;
-  color: #000000;
-  margin: 0 0 0.75rem;
+  font-weight: 500;
+  color: #0b0e11;
+}
+
+.experience-panel-dates {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #0b0e11;
+  margin: 0;
+  text-align: right;
 }
 
 .experience-panel-right ul {
