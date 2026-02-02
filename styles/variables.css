@@ -1,0 +1,82 @@
+/**
+ * Design tokens — single source of truth for colors, spacing, typography.
+ */
+
+:root {
+  /* Colors */
+  --color-text: #0b0e11;
+  --color-text-muted: #222;
+  --color-text-muted-light: #555;
+  --color-bg: #fff;
+  --color-bg-page: #ffffff;
+  --color-nav: #2C6777;
+  --color-nav-sidebar-start: #337a88;
+  --color-nav-sidebar-mid: #2C6777;
+  --color-nav-sidebar-end: #28606e;
+  --color-nav-text: #fff;
+  --color-nav-text-hover: #e8f4f5;
+  --color-border: #e1e7ed;
+  --color-border-panel: #e1e7ed;
+  --color-card-bg: #ffffff;
+  --color-card-shadow: rgba(12, 23, 38, 0.08);
+  --color-card-shadow-hover: rgba(12, 23, 38, 0.12);
+  --color-card-shadow-active: rgba(12, 23, 38, 0.16);
+  --color-card-active-border: #c9d6e2;
+  --color-backdrop: rgba(0, 0, 0, 0.4);
+  --color-button-ghost: #d7d7d7;
+  --color-button-ghost-hover: #f6f9fb;
+  --color-icon-bg: #e8ecf0;
+  --color-icon-stroke: #6b7a8d;
+  --color-panel-highlight: rgba(200, 216, 229, 0.25);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Layout */
+  --nav-height: 80px;
+  --content-max-width: 1200px;
+  --nav-inner-max-width: 1400px;
+  --sidebar-width: min(85vw, 320px);
+  --main-margin-top: 6rem;
+  --main-margin-top-md: 8rem;
+  --main-margin-top-sm: 4rem;
+
+  /* Typography */
+  --font-sans: 'Nunito', sans-serif;
+  --font-heading: 'Raleway', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 450;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --text-base: 1rem;
+  --text-lg: 1.05rem;
+  --text-xl: 1.1rem;
+  --text-2xl: 1.15rem;
+  --text-3xl: 1.5rem;
+  --text-4xl: 1.6rem;
+  --text-5xl: 2rem;
+  --line-height-tight: 1;
+  --line-height-normal: 1.6;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 180ms ease;
+  --transition-slow: 0.25s ease;
+  --transition-nav: 0.45s ease-in-out;
+  --transition-sidebar: 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}

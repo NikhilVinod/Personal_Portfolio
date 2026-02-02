@@ -4,61 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="experience-page">
-
-    <nav class="nav-site">
-        <div class="nav-inner">
-            <div class="nav-left-group">
-                <div class="logo">
-                    <img src="img/logos/logo.svg" alt="NV Logo">
-                </div>
-
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <!-- aria-current moved here so "Experience" is highlighted -->
-                        <li><a href="experience.html" aria-current="page">Experience</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <a class="resume-btn" href="files/Nikhil_Vinod_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-            <button type="button" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
-                <span class="nav-hamburger-line"></span>
-                <span class="nav-hamburger-line"></span>
-                <span class="nav-hamburger-line"></span>
-            </button>
-        </div>
-    </nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="nav-site" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-left-group">
+      <div class="logo">
+        <img src="../img/logos/logo.svg" alt="NV Logo">
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="experience.html" aria-current="page">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="resume-btn" href="../files/Nikhil_Vinod_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    <button type="button" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-hamburger-line" aria-hidden="true"></span>
+      <span class="nav-hamburger-line" aria-hidden="true"></span>
+      <span class="nav-hamburger-line" aria-hidden="true"></span>
+    </button>
+  </div>
+</nav>
 
     <div class="nav-sidebar-backdrop" aria-hidden="true"></div>
-    <aside class="nav-sidebar" aria-hidden="true">
-        <div class="nav-sidebar-header">
-            <button type="button" class="nav-sidebar-close" aria-label="Close menu">×</button>
-        </div>
-        <nav class="nav-sidebar-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="experience.html" aria-current="page">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-        <a class="nav-sidebar-resume" href="files/Nikhil_Vinod_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-    </aside>
+<aside class="nav-sidebar" aria-label="Mobile menu" aria-hidden="true">
+  <div class="nav-sidebar-header">
+    <button type="button" class="nav-sidebar-close" aria-label="Close menu">×</button>
+  </div>
+  <nav class="nav-sidebar-nav" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="experience.html" aria-current="page">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
+  <a class="nav-sidebar-resume" href="../files/Nikhil_Vinod_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+</aside>
 
-    <main class="page-wrapper">
+    <main id="main-content" class="page-wrapper">
         <section class="experience-section">
             <h1>Experience</h1>
 
             <div class="experience-grid">
-                <!-- Card 1 -->
                 <article class="experience-card" data-role="Software Engineering Intern">
-                    <img src="img/logos/wayLogo.svg" alt="wayLogo logo" class="experience-logo">
+                    <img src="../img/logos/wayLogo.svg" alt="Way.com logo" class="experience-logo">
                     <h2 class="experience-company">Way.com</h2>
                     <div class="experience-description">
                         <p class="experience-dates">Jun 2025 - Sep 2025</p>
@@ -70,9 +67,8 @@
                     </div>
                 </article>
 
-                <!-- Card 2 -->
                 <article class="experience-card" data-role="Software Engineering Intern">
-                    <img src="img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
+                    <img src="../img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
                     <h2 class="experience-company">JIFFY.ai</h2>
                     <div class="experience-description">
                         <p class="experience-dates">Jun 2024 - Sep 2024</p>
@@ -86,9 +82,8 @@ functionality, and Twilio for phone verification</li>
                     </div>
                 </article>
 
-                <!-- Card 3 -->
                 <article class="experience-card" data-role="UI/UX Designer">
-                    <img src="img/logos/bhailogLogo.svg" alt="Bhailog logo" class="experience-logo">
+                    <img src="../img/logos/bhailogLogo.svg" alt="Bhailog logo" class="experience-logo">
                     <h2 class="experience-company">Bhailog</h2>
                     <div class="experience-description">
                         <p class="experience-dates">May 2023 - Aug 2024</p>
@@ -100,14 +95,13 @@ functionality, and Twilio for phone verification</li>
                     </div>
                 </article>
 
-                <!-- Card 4 -->
                 <article class="experience-card" data-role="Software Engineering Intern">
-                    <img src="img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
+                    <img src="../img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
                     <h2 class="experience-company">JIFFY.ai</h2>
                     <div class="experience-description">
                         <p class="experience-dates">Jun 2023 - Aug 2023</p>
                         <ul>
-                            <li>Implemented automated user manual generation by leveraging JIFFY.ai API’s and Gen AI models for dynamic
+                            <li>Implemented automated user manual generation by leveraging JIFFY.ai API's and Gen AI models for dynamic
 documentation</li>
                             <li>Developed reusable front-end React components for deployment on the JIFFY.ai platform, enhancing widget integration
 for client applications</li>
@@ -118,9 +112,8 @@ for client applications</li>
             </div>
         </section>
     </main>
+    <img src="../img/elements/wave.svg" alt="" class="page-wave">
 
-    <img src="img/elements/wave.svg" alt="" class="page-wave">
-
-    <script src="script.js" defer></script>
+    <script src="../js/app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+/**
+ * Base styles — reset, typography, body.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  position: relative;
+  isolation: isolate;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Skip link — accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  z-index: 1001;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-nav);
+  color: var(--color-nav-text);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--space-md);
+  outline: 2px solid var(--color-nav-text);
+  outline-offset: 2px;
+}

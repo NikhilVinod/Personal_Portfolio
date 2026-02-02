@@ -1,0 +1,8 @@
+/**
+ * Main stylesheet — imports design tokens and all layers.
+ */
+
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'components.css';
