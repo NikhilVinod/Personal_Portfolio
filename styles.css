@@ -257,18 +257,21 @@ nav {
 }
 
 /* =========================
-   Experience Page
+   Experience & Projects Pages (shared layout/styling)
    ========================= */
 
-.experience-page {
+.experience-page,
+.projects-page {
   background-color: #ffffff;
 }
 
-.experience-section {
+.experience-section,
+.projects-section {
   padding-block: 0 4rem;
 }
 
-.experience-section h1 {
+.experience-section h1,
+.projects-section h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -295,36 +298,42 @@ nav {
 }
 
 /* Cards container */
-.experience-grid {
+.experience-grid,
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
 }
 
 /* Hide grid when panel is open (panel takes its place) */
-.experience-grid.is-hidden {
+.experience-grid.is-hidden,
+.projects-grid.is-hidden {
   display: none;
 }
 
 /* Responsive grid */
 @media (max-width: 900px) {
-  .experience-grid {
+  .experience-grid,
+  .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 600px) {
-  .experience-grid {
+  .experience-grid,
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 
-  .experience-section h1 {
+  .experience-section h1,
+  .projects-section h1 {
     text-align: center;
   }
 }
 
-/* A single experience card */
-.experience-card {
+/* A single card (experience or project) */
+.experience-card,
+.projects-card {
   background-color: #ffffff;
   border: 2px solid #e1e7ed;
   border-radius: 22px;
@@ -344,13 +353,15 @@ nav {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.experience-card:hover {
+.experience-card:hover,
+.projects-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(12, 23, 38, 0.12);
 }
 
 /* Selected card highlight (before panel opens) */
-.experience-card.is-active {
+.experience-card.is-active,
+.projects-card.is-active {
   border-color: #c9d6e2;
   box-shadow: 0 12px 28px rgba(12, 23, 38, 0.16);
   transform: translateY(-2px);
@@ -362,7 +373,14 @@ nav {
   width: auto;
 }
 
-.experience-company {
+.projects-logo {
+  margin-bottom: 1.1rem;
+  max-height: 125px;
+  width: auto;
+}
+
+.experience-company,
+.projects-company {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -371,21 +389,24 @@ nav {
   text-align: center;
 }
 
-.experience-role {
+.experience-role,
+.projects-role {
   display: none; /* hide on cards; used only in panel */
 }
 
 /* Keep descriptions hidden in cards (panel uses them as data) */
-.experience-card .experience-description {
+.experience-card .experience-description,
+.projects-card .projects-description {
   display: none;
 }
 
 /* =========================
-   Shared Expansion Panel
+   Shared Expansion Panel (experience & projects)
    ========================= */
 
 /* Panel is inserted BEFORE the grid and takes its place */
-.experience-panel {
+.experience-panel,
+.projects-panel {
   background: #fff;
   border: 2px solid #e1e7ed;
   border-radius: 22px;
@@ -402,13 +423,20 @@ nav {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-.experience-panel.is-open {
+.experience-panel.is-open,
+.projects-panel.is-open {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
 
-.experience-panel-back {
+.experience-panel-inner,
+.projects-panel-inner {
+  position: relative;
+}
+
+.experience-panel-back,
+.projects-panel-back {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -429,19 +457,22 @@ nav {
   transition: transform 150ms ease, background 150ms ease;
 }
 
-.experience-panel-back:hover {
+.experience-panel-back:hover,
+.projects-panel-back:hover {
   transform: translateY(-1px);
   background: #f6f9fb;
 }
 
-.experience-panel-inner {
+.experience-panel-inner,
+.projects-panel-inner {
   display: flex;
   align-items: stretch;
   gap: 0;
   padding: 1.75rem 2rem 2rem;
 }
 
-.experience-panel-left {
+.experience-panel-left,
+.projects-panel-left {
   min-width: 260px;
   padding-right: 2rem;
   border-right: 2px solid #e1e7ed;
@@ -453,13 +484,15 @@ nav {
   justify-content: center;
 }
 
-.experience-panel-left img {
+.experience-panel-left img,
+.projects-panel-left img {
   max-height: 120px;
   width: auto;
   margin-bottom: 1rem;
 }
 
-.experience-panel-left h2 {
+.experience-panel-left h2,
+.projects-panel-left h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -467,13 +500,15 @@ nav {
   text-align: center;
 }
 
-.experience-panel-left p {
+.experience-panel-left p,
+.projects-panel-left p {
   font-size: 1.05rem;
   color: #555;
   text-align: center;
 }
 
-.experience-panel-right {
+.experience-panel-right,
+.projects-panel-right {
   flex: 1;
   padding-left: 2rem;
   display: flex;
@@ -481,7 +516,8 @@ nav {
   flex-direction: column;
 }
 
-.experience-panel-meta {
+.experience-panel-meta,
+.projects-panel-meta {
   width: 100%;
   display: flex;
   align-items: baseline;
@@ -490,7 +526,21 @@ nav {
   margin: 0 0 0.9rem;
 }
 
-.experience-panel-role {
+.projects-panel-open-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.projects-panel-open-link img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.experience-panel-role,
+.projects-panel-role {
   font-size: 1rem;
   font-weight: 450;
   color: #0b0e11;
@@ -504,7 +554,8 @@ nav {
   text-align: right;
 }
 
-.experience-panel-right ul {
+.experience-panel-right ul,
+.projects-panel-right ul {
   list-style: disc;
   padding-left: 1.25rem;
   margin: 0;
@@ -513,7 +564,8 @@ nav {
   gap: 1.1rem;
 }
 
-.experience-panel-right li {
+.experience-panel-right li,
+.projects-panel-right li {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #222;
@@ -521,12 +573,14 @@ nav {
 
 /* Mobile: stack */
 @media (max-width: 700px) {
-  .experience-panel-inner {
+  .experience-panel-inner,
+  .projects-panel-inner {
     flex-direction: column;
     padding: 1.4rem 1.6rem 1.6rem;
   }
 
-  .experience-panel-left {
+  .experience-panel-left,
+  .projects-panel-left {
     min-width: 0;
     padding-right: 0;
     border-right: none;
@@ -535,7 +589,8 @@ nav {
     margin-bottom: 1.1rem;
   }
 
-  .experience-panel-right {
+  .experience-panel-right,
+  .projects-panel-right {
     padding-left: 0;
     align-items: flex-start;
   }
@@ -544,7 +599,9 @@ nav {
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .experience-card,
-  .experience-panel {
+  .experience-panel,
+  .projects-card,
+  .projects-panel {
     transition: none !important;
   }
 }
