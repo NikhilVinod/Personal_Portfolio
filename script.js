@@ -21,6 +21,7 @@
           <p></p>
         </div>
         <div class="experience-panel-right">
+          <p class="experience-panel-dates"></p>
           <ul></ul>
         </div>
       </div>
@@ -49,11 +50,13 @@
     const logo = card.querySelector(".experience-logo");
     const company = card.querySelector(".experience-company");
     const role = card.querySelector(".experience-role");
+    const dates = card.querySelector(".experience-dates");
     const bullets = card.querySelectorAll(".experience-description li");
 
     const panelImg = panel.querySelector(".experience-panel-left img");
     const panelH2 = panel.querySelector(".experience-panel-left h2");
     const panelP = panel.querySelector(".experience-panel-left p");
+    const panelDates = panel.querySelector(".experience-panel-dates");
     const panelUl = panel.querySelector(".experience-panel-right ul");
 
     panelImg.src = logo?.getAttribute("src") || "";
@@ -61,6 +64,7 @@
 
     panelH2.textContent = company?.textContent?.trim() || "";
     panelP.textContent = role?.textContent?.trim() || "";
+    panelDates.textContent = dates?.textContent?.trim() || "";
 
     panelUl.innerHTML = "";
     bullets.forEach((li) => {
