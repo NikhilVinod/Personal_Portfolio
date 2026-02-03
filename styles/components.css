@@ -535,8 +535,8 @@ nav {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   z-index: 2;
   pointer-events: none;
@@ -583,7 +583,7 @@ nav {
   top: var(--space-md);
   left: var(--space-md);
   font-family: var(--font-sans);
-  font-size: 1.35rem;
+  font-size: 1rem;
   border: none;
   background: var(--color-button-ghost);
   color: var(--color-nav-text);
@@ -596,7 +596,6 @@ nav {
 
 .experience-panel-back:hover,
 .projects-panel-back:hover {
-  transform: translateY(-1px);
   background: #b0b0b0;
 }
 
