@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="projects-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="nav-site" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-left-group">
+      <div class="logo">
+        <img src="img/logos/logo.svg" alt="NV Logo">
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="resume-btn" href="files/Nikhil_Vinod_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    <button type="button" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-hamburger-line" aria-hidden="true"></span>
+      <span class="nav-hamburger-line" aria-hidden="true"></span>
+      <span class="nav-hamburger-line" aria-hidden="true"></span>
+    </button>
+  </div>
+</nav>
+
+    <div class="nav-sidebar-backdrop" aria-hidden="true"></div>
+<aside class="nav-sidebar" aria-label="Mobile menu" aria-hidden="true">
+  <div class="nav-sidebar-header">
+    <button type="button" class="nav-sidebar-close" aria-label="Close menu">×</button>
+  </div>
+  <nav class="nav-sidebar-nav" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+    </ul>
+  </nav>
+  <a class="nav-sidebar-resume" href="files/Nikhil_Vinod_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+</aside>
+
+    <main id="main-content" class="page-wrapper">
+        <section class="projects-section">
+            <h1>Projects</h1>
+
+            <div class="projects-grid">
+                <article class="projects-card" data-role="1st Place Winner @ xAI Hackathon 25" data-project-url="https://devpost.com/software/haggle-7ajqf2?ref_content=user-portfolio&ref_feature=in_progress">
+                    <img src="img/icons/trophy.svg" alt="" class="projects-card-trophy" aria-hidden="true">
+                    <img src="img/project-pics/Haggle.svg" alt="Haggle logo" class="projects-logo">
+                    <h2 class="projects-company">Haggle</h2>
+                    <div class="projects-description">
+                        <ul>
+                            <li>Developed an autonomous voice negotiation AI agent using Grok LLM to gather user information, Grok Search to find
+                                local service providers, Twilio and Grok Realtime Voice API for real-time phone negotiations, and Next.js for a dashboard
+                                displaying negotiation outcomes</li>
+                            <li>Won 1st place out of 350+ participants, earning a trip to a SpaceX launch and 500K+ views on the project demo</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="projects-card" data-role="This Website!" data-project-url="#">
+                    <img src="img/project-pics/Portfolio.svg" alt="Portfolio logo" class="projects-logo">
+                    <h2 class="projects-company">Portfolio</h2>
+                    <div class="projects-description">
+                        <ul>
+                            <li>Built a responsive multi-page personal portfolio with vanilla HTML, CSS, and JavaScript</li>
+                            <li>Implemented expandable card panels for project and experience details (To Be Changed as more features added)</li>
+                            <li>More features coming soon!</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="projects-card" data-role="Data Mining Course Project @ SCU" data-project-url="https://github.com/RosalieWessels/F1_CSEN140_Project">
+                    <img src="img/project-pics/F1Project.svg" alt="F1 logo" class="projects-logo">
+                    <h2 class="projects-company">F1 Predictor</h2>
+                    <div class="projects-description">
+                        <ul>
+                            <li>Developed machine learning pipeline to predict Formula 1 podium finishes using driver and race data via FastF1 API</li>
+                            <li>Implemented different models(XGBoost, Neural Network, LightGBM, Catboost) and an ensemble of top performing models using efficient preprocessing and feature engineering strategies</li>
+                            <li>Achieved 1.776 test MAE and 1.96 MAE across 10 folds</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="projects-card" data-role="3rd Place Winner @ SCU Roblox Hack" data-project-url="https://devpost.com/software/manic-monday">
+                    <img src="img/icons/trophy.svg" alt="" class="projects-card-trophy" aria-hidden="true">
+                    <img src="img/project-pics/ManicMonday.svg" alt="Manic Monday logo" class="projects-logo">
+                    <h2 class="projects-company">Manic Monday</h2>
+                    <div class="projects-description">
+                        <ul>
+                            <li>Learned how to use Luau from scratch to developed a fast-paced multiplayer minigame in Roblox with 80+ unique visits</li>
+                            <li>Individually responsible for Dish Duty minigame, implementing with raycasting algorithms for collision
+                                detection/interaction between players and objects</li>
+                            <li>Won 3rd place out of 71+ participants</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <img src="img/elements/wave.svg" alt="" class="page-wave">
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
