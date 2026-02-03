@@ -34,3 +34,9 @@ main.page-wrapper {
   pointer-events: none;
   z-index: -1;
 }
+
+@media (max-width: 767px) {
+  .page-wave {
+    display: none;
+  }
+}
