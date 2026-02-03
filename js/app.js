@@ -28,7 +28,8 @@
     if (panel) return panel;
 
     const isProjects = prefix === 'projects';
-    const imgBase = /\/pages\//.test(window.location.pathname) ? '../' : '';
+    const pathname = window.location.pathname;
+    const imgBase = (/\/pages\//.test(pathname) || /\/(about|experience|projects)\//.test(pathname)) ? '../' : '';
     const metaExtra = isProjects
       ? '<a href="#" class="projects-panel-open-link" target="_blank" rel="noopener" aria-label="Open project"><img src="' + imgBase + 'img/icons/openLink.svg" alt="" /></a>'
       : '<span class="' + prefix + '-panel-dates"></span>';
