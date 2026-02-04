@@ -180,7 +180,7 @@ nav {
   border: none;
   background: transparent;
   color: var(--color-nav-text);
-  font-size: 1.75rem;
+  font-size: 3rem;
   line-height: var(--line-height-tight);
   cursor: pointer;
   transition: color 0.2s ease;
