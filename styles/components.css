@@ -299,6 +299,18 @@ nav {
   margin: 0;
 }
 
+.intro {
+  justify-content: center;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+}
+
+.intro .socials {
+  margin-top: var(--space-md);
+}
+
 .intro p {
   line-height: var(--line-height-normal);
   margin: 0;
@@ -364,6 +376,22 @@ nav {
   .pfp img {
     height: auto;
     width: clamp(200px, 60vw, 300px);
+  }
+
+  /* Sits the socials just above the wave's left crest, which is 17.25vw above
+     the viewport bottom given wave.svg's shape and full-width scaling. */
+  .home-page main.page-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: calc(100vh - var(--nav-height));
+    margin-top: 0;
+    padding-top: var(--space-2xl);
+    padding-bottom: 17.25vw;
+  }
+
+  .home-page .main-section {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
