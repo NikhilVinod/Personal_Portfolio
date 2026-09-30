@@ -199,6 +199,25 @@
 (function () {
   'use strict';
 
+  document.querySelectorAll('.timeline-card').forEach(function (card) {
+    function toggle() {
+      const isOpen = card.classList.toggle('is-open');
+      card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+})();
+
+(function () {
+  'use strict';
+
   const hamburger = document.querySelector('.nav-hamburger');
   const sidebar = document.querySelector('.nav-sidebar');
   const backdrop = document.querySelector('.nav-sidebar-backdrop');
