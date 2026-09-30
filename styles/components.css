@@ -856,7 +856,7 @@ nav {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  border: 2px solid #b5c4ce;
+  border: 2px solid var(--color-nav);
   background: #fff;
   flex-shrink: 0;
 }
@@ -938,7 +938,8 @@ nav {
 .timeline-card-meta {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 5px;
+  margin-left: 0.5rem;
 }
 
 .timeline-company {
@@ -1000,15 +1001,11 @@ nav {
 }
 
 .timeline-sub-role {
-  margin-top: 0.95rem;
-  padding-top: 0.95rem;
-  border-top: 1px solid #eaecef;
+  margin-top: 1.25rem;
 }
 
 .timeline-sub-role:first-child {
   margin-top: 0;
-  padding-top: 0;
-  border-top: none;
 }
 
 .timeline-sub-header {
@@ -1017,12 +1014,6 @@ nav {
   justify-content: space-between;
   gap: var(--space-md);
   margin-bottom: 0.5rem;
-}
-
-.timeline-sub-title {
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
 }
 
 .timeline-sub-dates {
