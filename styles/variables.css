@@ -45,13 +45,13 @@
   --content-max-width: 1200px;
   --nav-inner-max-width: 1400px;
   --sidebar-width: min(85vw, 320px);
-  --main-margin-top: 6rem;
-  --main-margin-top-md: 8rem;
-  --main-margin-top-sm: 4rem;
+  --main-margin-top: 3.5rem;
+  --main-margin-top-md: 5rem;
+  --main-margin-top-sm: 2rem;
 
   /* Typography */
   --font-sans: 'Nunito', sans-serif;
-  --font-heading: 'Raleway', sans-serif;
+  --font-heading: 'Fraunces', serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 450;
