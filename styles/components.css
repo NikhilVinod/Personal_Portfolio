@@ -830,11 +830,13 @@ nav {
 
 .timeline-entry {
   display: grid;
-  grid-template-columns: 140px 40px 1fr;
+  grid-template-columns: 140px 40px minmax(0, 1fr);
+  grid-template-areas: "dates node card";
   align-items: center;
 }
 
 .timeline-dates {
+  grid-area: dates;
   text-align: right;
   padding-right: 0;
   font-size: 0.875rem;
@@ -846,6 +848,7 @@ nav {
 }
 
 .timeline-node {
+  grid-area: node;
   display: flex;
   justify-content: center;
   position: relative;
@@ -868,6 +871,8 @@ nav {
 }
 
 .timeline-card {
+  grid-area: card;
+  min-width: 0;
   background: #fff;
   border: 1.5px solid #e4e8ed;
   border-radius: var(--radius-md);
@@ -940,6 +945,8 @@ nav {
   flex-direction: column;
   gap: 5px;
   margin-left: 0.5rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .timeline-company {
@@ -1024,17 +1031,56 @@ nav {
   flex-shrink: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .experience-timeline::before {
-    left: 19px;
+    left: calc(110px + 19px);
   }
 
   .timeline-entry {
-    grid-template-columns: 0 40px 1fr;
+    grid-template-columns: 110px 40px minmax(0, 1fr);
   }
 
   .timeline-dates {
-    display: none;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-timeline {
+    gap: var(--space-lg);
+  }
+
+  .experience-timeline::before {
+    left: 11px;
+  }
+
+  .timeline-entry {
+    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-areas:
+      "node dates"
+      "node card";
+    column-gap: 0.75rem;
+    row-gap: 0.4rem;
+    align-items: start;
+  }
+
+  /* Height matches one line of .timeline-dates so the dot sits beside it */
+  .timeline-node {
+    align-self: start;
+    align-items: center;
+    height: calc(0.8rem * 1.45);
+  }
+
+  .timeline-dates {
+    text-align: left;
+  }
+
+  .timeline-card {
+    padding: 0.95rem 1rem 1.1rem;
+  }
+
+  .timeline-card-meta {
+    margin-left: 0.25rem;
   }
 }
 
@@ -1042,5 +1088,18 @@ nav {
   .timeline-sub-header {
     flex-direction: column;
     gap: 2px;
+  }
+
+  .timeline-card-header {
+    gap: 0.6rem;
+  }
+
+  .timeline-company-badge {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline-bullets {
+    padding-left: 1rem;
   }
 }
