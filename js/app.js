@@ -199,6 +199,29 @@
 (function () {
   'use strict';
 
+  document.querySelectorAll('.timeline-card').forEach(function (card) {
+    const entry = card.closest('.timeline-entry');
+    const dot = entry ? entry.querySelector('.timeline-dot') : null;
+
+    function toggle() {
+      const isOpen = card.classList.toggle('is-open');
+      card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (dot) dot.classList.toggle('timeline-dot--filled', isOpen);
+    }
+
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+})();
+
+(function () {
+  'use strict';
+
   const hamburger = document.querySelector('.nav-hamburger');
   const sidebar = document.querySelector('.nav-sidebar');
   const backdrop = document.querySelector('.nav-sidebar-backdrop');
