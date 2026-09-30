@@ -8,7 +8,7 @@
 </head>
 <body class="experience-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <nav class="nav-site" aria-label="Main navigation">
   <div class="nav-inner">
     <div class="nav-left-group">
@@ -52,63 +52,154 @@
     <main id="main-content" class="page-wrapper">
         <section class="experience-section">
             <h1>Experience</h1>
+            <p class="experience-subtitle">Four teams where I shipped real products, from internal tools at PayPal to a startup I helped found.</p>
 
-            <div class="experience-grid">
-                <article class="experience-card" data-role="Software Engineering Intern">
-                    <img src="../img/logos/wayLogo.svg" alt="Way.com logo" class="experience-logo">
-                    <h2 class="experience-company">Way.com</h2>
-                    <div class="experience-description">
-                        <p class="experience-dates">Jun 2025 - Sep 2025</p>
-                        <ul>
-                            <li>Developed a mobile application to perform a 360° vehicle inspection and perform a damage cost assessment</li>
-                            <li>Implemented real time audio/video capture using WebRTC and integrated Gen AI models for guidance and analysis</li>
-                            <li>Built front-end interface using React Native, Tailwind CSS, and TypeScript </li>
-                        </ul>
-                    </div>
-                </article>
+            <div class="experience-timeline">
 
-                <article class="experience-card" data-role="Software Engineering Intern">
-                    <img src="../img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
-                    <h2 class="experience-company">JIFFY.ai</h2>
-                    <div class="experience-description">
-                        <p class="experience-dates">Jun 2024 - Sep 2024</p>
-                        <ul>
-                            <li>Developed the end-to-end investment account opening journey for the Finley mobile app using Flutter, supporting
-multiple account types (Individual, Joint, IRA, and Education)</li>
-                            <li>Integrated various third party tools: Plaid for data aggregation, Google Places API for address autocomplete
-functionality, and Twilio for phone verification</li>
-                            <li>Deployed AWS Lambda functions for back-end API integration</li>
-                        </ul>
+                <!-- PayPal -->
+                <div class="timeline-entry">
+                    <div class="timeline-dates">Jun – Sep 2026</div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot timeline-dot--filled"></div>
                     </div>
-                </article>
+                    <article class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-company-badge">
+                                <img src="../img/logos/paypalLogo.svg" alt="PayPal logo">
+                            </div>
+                            <div class="timeline-card-meta">
+                                <h2 class="timeline-company">PayPal</h2>
+                                <p class="timeline-role">Software Engineering Intern · Merchant Onboarding</p>
+                            </div>
+                        </div>
+                        <div class="timeline-highlight">Adopted org-wide as the primary triage tool · days → seconds</div>
+                        <ul class="timeline-bullets">
+                            <li>Built a Next.js app that pulls merchant data from 10+ internal systems (account info, limitations, feature blockers, third-party details) into one triage view.</li>
+                            <li>Designed a DFS-based path-enumeration algorithm over a dependency tree of requirements to compute the minimal steps to unlock account capabilities, replacing manual case-by-case investigation.</li>
+                            <li>Built a timeline visualization of merchant onboarding journeys from first-party tracking data, showing engineers exactly where a merchant dropped off.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Next.js</span>
+                            <span class="timeline-tag">Graph algorithms</span>
+                            <span class="timeline-tag">Data visualization</span>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="experience-card" data-role="UI/UX Designer">
-                    <img src="../img/logos/bhailogLogo.svg" alt="Bhailog logo" class="experience-logo">
-                    <h2 class="experience-company">Bhailog</h2>
-                    <div class="experience-description">
-                        <p class="experience-dates">May 2023 - Aug 2024</p>
-                        <ul>
-                            <li>Led end-to-end UX design for the official Bhailog app, conducting user research, defining user flows, and delivering production-ready designs</li>
-                            <li>Created wireframes, prototypes, and high-fidelity UI designs using Figma and Miro for seamless developer handoff</li>
-                            <li>Collaborated cross-functionally with leadership, product, and developer teams to iterate on designs and incorporate feedback</li>
-                        </ul>
+                <!-- Bhailog -->
+                <div class="timeline-entry">
+                    <div class="timeline-dates">Mar – May 2026</div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
                     </div>
-                </article>
+                    <article class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-company-badge">
+                                <img src="../img/logos/bhailogLogo.svg" alt="Bhailog logo">
+                            </div>
+                            <div class="timeline-card-meta">
+                                <h2 class="timeline-company">Bhailog</h2>
+                                <p class="timeline-role">Founding Engineer</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Designed the Bhailog beta in Figma and built it end to end, owning architecture and development.</li>
+                            <li>Integrated the OpenAI Realtime API over WebSockets, with PCM16 streaming and voice activity detection, to turn live speech into structured job postings.</li>
+                            <li>Built AI-powered worker matching using semantic similarity search on text embeddings across job and worker profiles.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Figma</span>
+                            <span class="timeline-tag">OpenAI Realtime API</span>
+                            <span class="timeline-tag">WebSockets</span>
+                            <span class="timeline-tag">Embeddings</span>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="experience-card" data-role="Software Engineering Intern">
-                    <img src="../img/logos/jiffyLogo.svg" alt="JIFFY.ai logo" class="experience-logo">
-                    <h2 class="experience-company">JIFFY.ai</h2>
-                    <div class="experience-description">
-                        <p class="experience-dates">Jun 2023 - Aug 2023</p>
-                        <ul>
-                            <li>Implemented automated user manual generation by leveraging JIFFY.ai API's and Gen AI models for dynamic
-documentation</li>
-                            <li>Developed reusable front-end React components for deployment on the JIFFY.ai platform, enhancing widget integration
-for client applications</li>
-                            <li>Designed and built a responsive web page to showcase demo videos of product features</li>
-                        </ul>
+                <!-- Way.com -->
+                <div class="timeline-entry">
+                    <div class="timeline-dates">Jun – Sep 2025</div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
                     </div>
-                </article>
+                    <article class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-company-badge">
+                                <img src="../img/logos/wayLogo.svg" alt="Way.com logo">
+                            </div>
+                            <div class="timeline-card-meta">
+                                <h2 class="timeline-company">Way.com</h2>
+                                <p class="timeline-role">Software Engineering Intern Consultant</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Built a React Native and TypeScript app for 360° vehicle inspections with real-time WebRTC audio and video streaming over WebSockets.</li>
+                            <li>Implemented a multi-step AI inspection workflow with LangGraph and Gemini vision models that checks photo quality and returns a pass or fail for each stage.</li>
+                            <li>Extracted VINs from live video frames with Gemini and automatically pulled vehicle details from the NHTSA API.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">React Native</span>
+                            <span class="timeline-tag">TypeScript</span>
+                            <span class="timeline-tag">WebRTC</span>
+                            <span class="timeline-tag">LangGraph</span>
+                            <span class="timeline-tag">Gemini</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- JIFFY.ai -->
+                <div class="timeline-entry">
+                    <div class="timeline-dates">Jun 2023 –<br>Sep 2024</div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <article class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-company-badge">
+                                <img src="../img/logos/jiffyLogo.svg" alt="JIFFY.ai logo">
+                            </div>
+                            <div class="timeline-card-meta">
+                                <h2 class="timeline-company">JIFFY.ai</h2>
+                                <p class="timeline-role">Software Engineering Intern Consultant · 2 internships</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-sub-role">
+                            <div class="timeline-sub-header">
+                                <span class="timeline-sub-title">Finley app – investment account onboarding</span>
+                                <span class="timeline-sub-dates">Jun – Sep 2024</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Built the end-to-end investment account onboarding journey for the Finley mobile app in Flutter, supporting Individual, Joint, IRA, and Education accounts.</li>
+                                <li>Integrated Plaid for linking bank accounts, Google Places for address autocomplete, and Twilio for phone verification.</li>
+                                <li>Implemented AWS Lambda functions for serverless back-end API integration.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Flutter</span>
+                                <span class="timeline-tag">Plaid</span>
+                                <span class="timeline-tag">Twilio</span>
+                                <span class="timeline-tag">AWS Lambda</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-sub-role">
+                            <div class="timeline-sub-header">
+                                <span class="timeline-sub-title">JIFFY.ai platform internship</span>
+                                <span class="timeline-sub-dates">Jun – Aug 2023</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Implemented automated user manual generation by leveraging JIFFY.ai APIs and Gen AI models for dynamic documentation.</li>
+                                <li>Developed reusable front-end React components for deployment on the JIFFY.ai platform, enhancing widget integration for client applications.</li>
+                                <li>Designed and built a responsive web page to showcase demo videos of product features.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">React</span>
+                                <span class="timeline-tag">Gen AI</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
             </div>
         </section>
     </main>
