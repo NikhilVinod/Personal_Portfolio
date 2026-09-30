@@ -24,9 +24,9 @@ main.page-wrapper {
   }
 }
 
-/* Wave pinned behind content */
+/* Wave pinned to bottom of viewport */
 .page-wave {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
