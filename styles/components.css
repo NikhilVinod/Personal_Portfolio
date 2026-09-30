@@ -752,14 +752,6 @@ nav {
    Experience Timeline
    ========================= */
 
-.experience-subtitle {
-  font-size: var(--text-lg);
-  color: var(--color-text-muted-light);
-  margin: 0 0 var(--space-3xl);
-  line-height: var(--line-height-normal);
-  max-width: 560px;
-}
-
 .experience-timeline {
   position: relative;
   display: flex;
@@ -789,10 +781,11 @@ nav {
   padding-right: 0;
   padding-top: 1.2rem;
   font-size: 0.8rem;
-  color: #8a96a3;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
   font-family: var(--font-sans);
   line-height: 1.45;
-  overflow-wrap: break-word;
+  white-space: nowrap;
 }
 
 .timeline-node {
@@ -981,7 +974,8 @@ nav {
 
 .timeline-sub-dates {
   font-size: 0.77rem;
-  color: var(--color-text-muted-light);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
   white-space: nowrap;
   flex-shrink: 0;
 }
