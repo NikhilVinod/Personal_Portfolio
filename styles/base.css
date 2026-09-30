@@ -17,6 +17,14 @@ body {
   height: 100%;
 }
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: var(--font-sans);
   font-weight: var(--font-weight-light);
