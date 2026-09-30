@@ -101,7 +101,7 @@ function build() {
     }
     const navbarHtml = prefixAssets(navbar, assetPrefix);
     const sidebarHtml = prefixAssets(sidebar, assetPrefix);
-    const waveHtml = prefixAssets(waveRaw, assetPrefix);
+    const waveHtml = pageId === 'home' ? prefixAssets(waveRaw, assetPrefix) : '';
 
     const bodyClassAttr = bodyClass ? ` class="${bodyClass}"` : '';
     const fullHtml = `<!DOCTYPE html>
@@ -150,7 +150,7 @@ function build() {
       .replace(/\bhref="home\.html"/g, 'href="home.html"')
       .replace(/\bsrc="img\//g, 'src="../img/')
       .replace(/\bhref="files\//g, 'href="../files/');
-    const waveForPages = waveRaw.replace(/src="img\//, 'src="../img/');
+    const waveForPages = pageId === 'home' ? waveRaw.replace(/src="img\//, 'src="../img/') : '';
 
     const bodyClassAttr = pageBodyClass ? ` class="${pageBodyClass}"` : '';
     const fullHtmlForPages = `<!DOCTYPE html>
