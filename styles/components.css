@@ -764,7 +764,7 @@ nav {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(130px + 19px);
+  left: calc(140px + 19px);
   width: 2px;
   background: #d5dce4;
   z-index: 0;
@@ -772,15 +772,14 @@ nav {
 
 .timeline-entry {
   display: grid;
-  grid-template-columns: 130px 40px 1fr;
-  align-items: flex-start;
+  grid-template-columns: 140px 40px 1fr;
+  align-items: center;
 }
 
 .timeline-dates {
   text-align: right;
   padding-right: 0;
-  padding-top: 1.2rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   font-family: var(--font-sans);
@@ -791,7 +790,6 @@ nav {
 .timeline-node {
   display: flex;
   justify-content: center;
-  padding-top: 1.25rem;
   position: relative;
   z-index: 1;
 }
@@ -973,7 +971,7 @@ nav {
 }
 
 .timeline-sub-dates {
-  font-size: 0.77rem;
+  font-size: 0.85rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   white-space: nowrap;
