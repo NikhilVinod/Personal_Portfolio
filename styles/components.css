@@ -304,6 +304,18 @@ nav {
   margin: 0;
 }
 
+.intro {
+  justify-content: center;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+}
+
+.intro .socials {
+  margin-top: var(--space-md);
+}
+
 .intro p {
   line-height: var(--line-height-normal);
   margin: 0;
@@ -346,17 +358,56 @@ nav {
   height: 100%;
 }
 
-.pfp img {
-  height: 100%;
-  width: auto;
-  max-height: 380px;
+.pfp-frame {
+  position: relative;
+  width: clamp(200px, 60vw, 300px);
   aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  transform: translateY(-6%);
+}
+
+/* Offsets are fractions of the photo size so they scale with it:
+   24px rest offset, 8px ring move, 4px photo move on a 280px photo. */
+.pfp-ring {
+  position: absolute;
+  top: 8.57%;
+  left: 8.57%;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: #e9f1f3;
+}
+
+.pfp-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
   object-fit: cover;
   object-position: center 30%;
-  border-radius: var(--radius-full);
-  display: block;
-  transform: translateY(-6%);
-  transition: transform var(--transition-slow) ease, width var(--transition-slow) ease;
+  box-shadow: 0 0 0 8px #fff;
+}
+
+.pfp-ring,
+.pfp-img {
+  transition: transform 0.4s ease;
+}
+
+.pfp-frame:hover .pfp-ring {
+  transform: translate(2.86%, 2.86%);
+}
+
+.pfp-frame:hover .pfp-img {
+  transform: translate(-1.43%, -1.43%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pfp-ring,
+  .pfp-img {
+    transition: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -366,9 +417,20 @@ nav {
     margin-bottom: var(--space-5xl);
   }
 
-  .pfp img {
-    height: auto;
-    width: clamp(200px, 60vw, 300px);
+  /* Sits the socials just above the wave's left crest, which is 17.25vw above
+     the viewport bottom given wave.svg's shape and full-width scaling. */
+  .home-page main.page-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: calc(100vh - var(--nav-height));
+    margin-top: 0;
+    padding-top: var(--space-2xl);
+    padding-bottom: 17.25vw;
+  }
+
+  .home-page .main-section {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -384,10 +446,6 @@ nav {
   .pfp {
     order: -1;
     justify-content: center;
-  }
-
-  .pfp img {
-    width: clamp(200px, 60vw, 300px);
   }
 
   .socials {
