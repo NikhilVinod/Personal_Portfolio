@@ -33,7 +33,7 @@ const FOLDER_LINKS = {
 };
 
 const PAGE_CONFIG = [
-  { id: 'home', title: 'Home', bodyClass: '', outputPath: 'index.html', isRoot: true },
+  { id: 'home', title: 'Home', bodyClass: 'home-page', outputPath: 'index.html', isRoot: true },
   { id: 'about', title: 'About Me', bodyClass: '', outputPath: 'about/index.html', isRoot: false },
   { id: 'experience', title: 'Experience', bodyClass: 'experience-page', outputPath: 'experience/index.html', isRoot: false },
   { id: 'projects', title: 'Projects', bodyClass: 'projects-page', outputPath: 'projects/index.html', isRoot: false },
