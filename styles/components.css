@@ -1114,7 +1114,7 @@ nav {
 
 .about-intro-grid {
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 3fr 2fr;
   grid-template-areas:
     "heading ."
     "text    card";
@@ -1132,6 +1132,7 @@ nav {
 
 .about-text {
   grid-area: text;
+  align-self: center;
   gap: 1.25rem;
   justify-content: flex-start;
 }
