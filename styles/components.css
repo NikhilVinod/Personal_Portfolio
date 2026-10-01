@@ -1308,9 +1308,9 @@ nav {
   font-family: var(--font-sans);
   font-size: 0.8rem;
   font-weight: var(--font-weight-regular);
-  color: var(--color-text-muted);
-  background: #f2f4f7;
-  border-radius: 6px;
+  color: var(--color-tag-text);
+  background: #eef3f5;
+  border-radius: 999px;
   padding: 0.2rem 0.6rem;
 }
 
