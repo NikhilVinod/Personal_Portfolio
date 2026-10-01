@@ -1,5 +1,13 @@
 /**
  * Design tokens — single source of truth for colors, spacing, typography.
+ *
+ * Breakpoints (CSS variables can't be used in @media, so they're hardcoded):
+ *   480px  — small phones: tighter timeline cards
+ *   600px  — projects grid goes to 1 column
+ *   640px  — timeline collapses to one column; about cards/toolkit stack
+ *   700px  — projects panel stacks vertically
+ *   768px  — main mobile/desktop switch (max-width rules use 767px)
+ *   900px  — projects grid goes to 2 columns; timeline date column narrows
  */
 
 :root {
@@ -36,6 +44,15 @@
   --color-home-accent: #e9eff5;
   --color-highlight-bg: #e8f3f5;
   --color-tag-bg: #eef3f5;
+
+  /* Elevation */
+  --shadow-flat: 0 1px 4px var(--color-card-shadow-faint);
+  --shadow-low: 0 1px 4px var(--color-card-shadow-soft), 0 4px 12px var(--color-card-shadow-faint);
+  --shadow-md: 0 4px 16px var(--color-card-shadow);
+  --shadow-high: 0 10px 24px var(--color-card-shadow-hover);
+  --shadow-higher: 0 12px 28px var(--color-card-shadow-hover);
+  --shadow-active: 0 12px 28px var(--color-card-shadow-active);
+
   /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -61,9 +78,13 @@
   --font-heading: 'Fraunces', serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
-  --font-weight-medium: 450;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --text-3xs: 0.72rem;
+  --text-2xs: 0.75rem;
+  --text-xs: 0.8rem;
+  --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.05rem;
   --text-xl: 1.1rem;
@@ -71,6 +92,7 @@
   --text-3xl: 1.5rem;
   --text-4xl: 1.6rem;
   --text-5xl: 2rem;
+  --text-display: 3.5rem;
   --line-height-tight: 1;
   --line-height-normal: 1.6;
 
@@ -79,6 +101,7 @@
   --radius-md: 12px;
   --radius-lg: 22px;
   --radius-full: 50%;
+  --radius-pill: 999px;
 
   /* Transitions */
   --transition-fast: 150ms ease;
