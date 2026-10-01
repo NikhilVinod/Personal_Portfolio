@@ -736,7 +736,14 @@ nav {
 
 @media (prefers-reduced-motion: reduce) {
   .projects-card,
-  .projects-panel {
+  .projects-panel,
+  .timeline-chevron,
+  .timeline-card-body,
+  .nav-sidebar,
+  .nav-sidebar-backdrop,
+  .socials a,
+  .resume-btn,
+  .nav-sidebar-resume {
     transition: none !important;
   }
 }
