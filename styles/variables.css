@@ -5,31 +5,40 @@
 :root {
   /* Colors */
   --color-text: #0b0e11;
-  --color-text-muted: #222;
-  --color-text-muted-light: #555;
+  --color-text-muted: #2f4250;
+  --color-text-muted-light: #3a4d59;
   --color-tag-text: #24485a;
   --color-bg: #fff;
   --color-bg-page: #ffffff;
-  --color-nav: #2C6777;
-  --color-nav-sidebar-start: #337a88;
-  --color-nav-sidebar-mid: #2C6777;
-  --color-nav-sidebar-end: #28606e;
+  --color-nav: #3d6878;
+  --color-nav-sidebar-start: #447b89;
+  --color-nav-sidebar-mid: #3d6878;
+  --color-nav-sidebar-end: #39616f;
   --color-nav-text: #fff;
   --color-nav-text-hover: #e8f4f5;
   --color-border: #e1e7ed;
   --color-border-panel: #e1e7ed;
+  --color-border-card: #e4e8ed;
+  --color-divider: #eaecef;
+  --color-timeline-line: #d5dce4;
   --color-card-bg: #ffffff;
+  --color-card-shadow-faint: rgba(12, 23, 38, 0.04);
+  --color-card-shadow-soft: rgba(12, 23, 38, 0.05);
   --color-card-shadow: rgba(12, 23, 38, 0.08);
   --color-card-shadow-hover: rgba(12, 23, 38, 0.12);
   --color-card-shadow-active: rgba(12, 23, 38, 0.16);
   --color-card-active-border: #c9d6e2;
   --color-backdrop: rgba(0, 0, 0, 0.4);
   --color-button-ghost: #d7d7d7;
-  --color-button-ghost-hover: #f6f9fb;
+  --color-button-ghost-hover: #b0b0b0;
   --color-icon-bg: #e8ecf0;
   --color-icon-stroke: #6b7a8d;
   --color-panel-highlight: rgba(200, 216, 229, 0.25);
   --color-surface-subtle: #f2f6f8;
+  --color-surface-teal: #e9f1f3;
+  --color-home-accent: #e9eff5;
+  --color-highlight-bg: #e8f3f5;
+  --color-tag-bg: #eef3f5;
   --color-text-secondary: #3a4d59;
 
   /* Spacing */
