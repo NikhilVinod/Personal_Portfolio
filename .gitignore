@@ -20,6 +20,7 @@ npm-debug.log*
 # Editor / IDE
 .idea/
 .vscode/
+.cursor/
 *.swp
 *.swo
 *~

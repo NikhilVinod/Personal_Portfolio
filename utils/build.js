@@ -33,11 +33,59 @@ const FOLDER_LINKS = {
 };
 
 const PAGE_CONFIG = [
-  { id: 'home', title: 'Home', bodyClass: 'home-page', outputPath: 'index.html', isRoot: true },
-  { id: 'about', title: 'About Me', bodyClass: '', outputPath: 'about/index.html', isRoot: false },
-  { id: 'experience', title: 'Experience', bodyClass: 'experience-page', outputPath: 'experience/index.html', isRoot: false },
-  { id: 'projects', title: 'Projects', bodyClass: 'projects-page', outputPath: 'projects/index.html', isRoot: false },
+  {
+    id: 'home',
+    title: 'Nikhil Vinod',
+    description: 'Computer Science student at Santa Clara University. Explore my projects, experience, and background.',
+    bodyClass: 'home-page',
+    outputPath: 'index.html',
+    isRoot: true,
+  },
+  {
+    id: 'about',
+    title: 'About — Nikhil Vinod',
+    description: 'A little more about who I am, what I study, and what drives me.',
+    bodyClass: '',
+    outputPath: 'about/index.html',
+    isRoot: false,
+  },
+  {
+    id: 'experience',
+    title: 'Experience — Nikhil Vinod',
+    description: 'My internship and work experience in software engineering.',
+    bodyClass: 'experience-page',
+    outputPath: 'experience/index.html',
+    isRoot: false,
+  },
+  {
+    id: 'projects',
+    title: 'Projects — Nikhil Vinod',
+    description: "Software projects I've built — from mobile apps to data tools.",
+    bodyClass: 'projects-page',
+    outputPath: 'projects/index.html',
+    isRoot: false,
+  },
 ];
+
+const FONTS_URL =
+  'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300..700&display=swap';
+
+/**
+ * Shared <head> contents for every generated page.
+ */
+function headHtml(title, description, assetPrefix, stylePath) {
+  return `<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="${description}">
+    <title>${title}</title>
+    <link rel="icon" href="${assetPrefix}img/logos/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="${FONTS_URL}">
+    <link rel="stylesheet" href="${stylePath}">
+</head>`;
+}
 
 function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -79,7 +127,7 @@ function build() {
   const skipLink = '<a href="#main-content" class="skip-link">Skip to main content</a>\n    ';
 
   for (const config of PAGE_CONFIG) {
-    const { id: pageId, title, bodyClass, outputPath, isRoot } = config;
+    const { id: pageId, title, description, bodyClass, outputPath, isRoot } = config;
     const mainPath = hasPagesDir
       ? path.join(PAGES, pageId + '.html')
       : (pageId === 'home' ? path.join(ROOT, 'index.html') : path.join(ROOT, pageId, 'index.html'));
@@ -106,12 +154,7 @@ function build() {
     const bodyClassAttr = bodyClass ? ` class="${bodyClass}"` : '';
     const fullHtml = `<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title}</title>
-    <link rel="stylesheet" href="${stylePath}">
-</head>
+${headHtml(title, description, assetPrefix, stylePath)}
 <body${bodyClassAttr}>
     ${skipLink}
     ${navbarHtml}
@@ -134,7 +177,7 @@ function build() {
   if (!hasPagesDir) return;
   const pagesDir = path.join(ROOT, 'pages');
   for (const config of PAGE_CONFIG) {
-    const { id: pageId, title, bodyClass: pageBodyClass } = config;
+    const { id: pageId, title, description, bodyClass: pageBodyClass } = config;
     const mainPath = path.join(PAGES, pageId + '.html');
     const pageRaw = fs.readFileSync(mainPath, 'utf8');
     const mainMatch = pageRaw.match(/<main\s+id="main-content"[^>]*>[\s\S]*?<\/main>/);
@@ -155,12 +198,7 @@ function build() {
     const bodyClassAttr = pageBodyClass ? ` class="${pageBodyClass}"` : '';
     const fullHtmlForPages = `<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title}</title>
-    <link rel="stylesheet" href="../styles/main.css">
-</head>
+${headHtml(title, description, '../', '../styles/main.css')}
 <body${bodyClassAttr}>
     ${skipLink}
     ${navbarForPages}

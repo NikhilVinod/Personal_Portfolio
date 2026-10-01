@@ -1,67 +1,40 @@
 /**
- * Portfolio app — expansion panels (experience/projects) and mobile nav.
+ * Portfolio app — projects expansion panel, experience timeline, and mobile nav.
  * @file js/app.js
  */
 
 (function () {
   'use strict';
 
-  const gridSelectors = '.experience-grid, .projects-grid';
-  const grids = document.querySelectorAll(gridSelectors);
-
-  /**
-   * @param {Element} grid
-   * @returns {'experience' | 'projects'}
-   */
-  function getPrefix(grid) {
-    return grid.classList.contains('experience-grid') ? 'experience' : 'projects';
-  }
+  const grids = document.querySelectorAll('.projects-grid');
 
   /**
    * @param {Element} grid
    * @returns {HTMLElement}
    */
   function ensurePanel(grid) {
-    const prefix = getPrefix(grid);
-    const panelClass = prefix + '-panel';
-    let panel = /** @type {HTMLElement | null} */ (grid.parentElement.querySelector('.' + panelClass));
+    let panel = /** @type {HTMLElement | null} */ (grid.parentElement.querySelector('.projects-panel'));
     if (panel) return panel;
 
-    const isProjects = prefix === 'projects';
     const pathname = window.location.pathname;
+    // Detect asset root: pages/ dev files and clean-URL subfolders both sit one level below root.
     const imgBase = (/\/pages\//.test(pathname) || /\/(about|experience|projects)\//.test(pathname)) ? '../' : '';
-    const metaExtra = isProjects
-      ? '<a href="#" class="projects-panel-open-link" target="_blank" rel="noopener" aria-label="Open project"><img src="' + imgBase + 'img/icons/openLink.svg" alt="" /></a>'
-      : '<span class="' + prefix + '-panel-dates"></span>';
 
     panel = document.createElement('section');
-    panel.className = panelClass;
+    panel.className = 'projects-panel';
     panel.setAttribute('aria-label', 'Detail view');
     panel.innerHTML =
-      '<button type="button" class="' +
-      prefix +
-      '-panel-back" aria-label="Back to list">←</button>' +
-      '<div class="' +
-      prefix +
-      '-panel-inner">' +
-      '<div class="' +
-      prefix +
-      '-panel-left">' +
+      '<button type="button" class="projects-panel-back" aria-label="Back to list">←</button>' +
+      '<div class="projects-panel-inner">' +
+      '<div class="projects-panel-left">' +
       '<img alt="" />' +
-      '<h2 class="' +
-      prefix +
-      '-company"></h2>' +
+      '<h2 class="projects-company"></h2>' +
       '</div>' +
-      '<div class="' +
-      prefix +
-      '-panel-right">' +
-      '<div class="' +
-      prefix +
-      '-panel-meta">' +
-      '<span class="' +
-      prefix +
-      '-panel-role"></span>' +
-      metaExtra +
+      '<div class="projects-panel-right">' +
+      '<div class="projects-panel-meta">' +
+      '<span class="projects-panel-role"></span>' +
+      '<a href="#" class="projects-panel-open-link" target="_blank" rel="noopener" aria-label="Open project">' +
+      '<img src="' + imgBase + 'img/icons/openLink.svg" alt="" /></a>' +
       '</div>' +
       '<ul></ul>' +
       '</div>' +
@@ -78,22 +51,18 @@
   /**
    * @param {Element} grid
    * @param {Element} activeCard
-   * @param {'experience' | 'projects'} prefix
    */
-  function setActiveCard(grid, activeCard, prefix) {
-    const cardClass = '.' + prefix + '-card';
-    grid.querySelectorAll(cardClass).forEach(function (c) {
+  function setActiveCard(grid, activeCard) {
+    grid.querySelectorAll('.projects-card').forEach(function (c) {
       c.classList.toggle('is-active', c === activeCard);
     });
   }
 
   /**
    * @param {Element} grid
-   * @param {'experience' | 'projects'} prefix
    */
-  function clearActiveCards(grid, prefix) {
-    const cardClass = '.' + prefix + '-card';
-    grid.querySelectorAll(cardClass).forEach(function (c) {
+  function clearActiveCards(grid) {
+    grid.querySelectorAll('.projects-card').forEach(function (c) {
       c.classList.remove('is-active');
     });
   }
@@ -101,19 +70,16 @@
   /**
    * @param {HTMLElement} panel
    * @param {Element} card
-   * @param {'experience' | 'projects'} prefix
    */
-  function fillPanelFromCard(panel, card, prefix) {
-    const logo = card.querySelector('.' + prefix + '-logo');
-    const company = card.querySelector('.' + prefix + '-company');
-    const dates = card.querySelector('.' + prefix + '-dates');
-    const bullets = card.querySelectorAll('.' + prefix + '-description li');
+  function fillPanelFromCard(panel, card) {
+    const logo = card.querySelector('.projects-logo');
+    const company = card.querySelector('.projects-company');
+    const bullets = card.querySelectorAll('.projects-description li');
 
-    const panelImg = panel.querySelector('.' + prefix + '-panel-left img');
-    const panelH2 = panel.querySelector('.' + prefix + '-panel-left h2');
-    const panelRole = panel.querySelector('.' + prefix + '-panel-role');
-    const panelDates = panel.querySelector('.' + prefix + '-panel-dates');
-    const panelUl = panel.querySelector('.' + prefix + '-panel-right ul');
+    const panelImg = panel.querySelector('.projects-panel-left img');
+    const panelH2 = panel.querySelector('.projects-panel-left h2');
+    const panelRole = panel.querySelector('.projects-panel-role');
+    const panelUl = panel.querySelector('.projects-panel-right ul');
 
     if (panelImg) {
       panelImg.src = logo ? (logo.getAttribute('src') || '') : '';
@@ -121,18 +87,15 @@
     }
     if (panelH2) panelH2.textContent = company ? (company.textContent || '').trim() : '';
     if (panelRole) panelRole.textContent = card.getAttribute('data-role') || '';
-    if (panelDates && dates) panelDates.textContent = (dates.textContent || '').trim();
 
-    if (prefix === 'projects') {
-      const openLink = panel.querySelector('.projects-panel-open-link');
-      if (openLink && openLink instanceof HTMLAnchorElement) {
-        const url = card.getAttribute('data-project-url') || '#';
-        if (url === '#' || url === '') {
-          openLink.style.display = 'none';
-        } else {
-          openLink.href = url;
-          openLink.style.display = '';
-        }
+    const openLink = panel.querySelector('.projects-panel-open-link');
+    if (openLink && openLink instanceof HTMLAnchorElement) {
+      const url = card.getAttribute('data-project-url') || '#';
+      if (url === '#' || url === '') {
+        openLink.style.display = 'none';
+      } else {
+        openLink.href = url;
+        openLink.style.display = '';
       }
     }
 
@@ -165,16 +128,14 @@
   }
 
   grids.forEach(function (grid) {
-    const prefix = getPrefix(grid);
     const panel = ensurePanel(grid);
-    const backBtn = panel.querySelector('.' + prefix + '-panel-back');
-    const cardClass = '.' + prefix + '-card';
+    const backBtn = panel.querySelector('.projects-panel-back');
 
-    grid.querySelectorAll(cardClass).forEach(function (card) {
+    grid.querySelectorAll('.projects-card').forEach(function (card) {
       card.addEventListener('click', function (e) {
         e.stopPropagation();
-        setActiveCard(grid, card, prefix);
-        fillPanelFromCard(panel, card, prefix);
+        setActiveCard(grid, card);
+        fillPanelFromCard(panel, card);
         openPanel(panel, grid);
       });
     });
@@ -182,7 +143,7 @@
     if (backBtn) {
       backBtn.addEventListener('click', function (e) {
         e.stopPropagation();
-        clearActiveCards(grid, prefix);
+        clearActiveCards(grid);
         closePanel(panel, grid);
       });
     }
@@ -190,7 +151,7 @@
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
       if (!panel.classList.contains('is-open')) return;
-      clearActiveCards(grid, prefix);
+      clearActiveCards(grid);
       closePanel(panel, grid);
     });
   });
