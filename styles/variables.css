@@ -5,8 +5,7 @@
  *   480px  — small phones: tighter timeline cards
  *   600px  — projects grid goes to 1 column
  *   640px  — timeline collapses to one column; about cards/toolkit stack
- *   700px  — projects panel stacks vertically
- *   768px  — main mobile/desktop switch (max-width rules use 767px)
+ *   768px  — main mobile/desktop switch (max-width rules use 767px); featured project stacks
  *   900px  — projects grid goes to 2 columns; timeline date column narrows
  */
 
@@ -44,6 +43,10 @@
   --color-home-accent: #e9eff5;
   --color-highlight-bg: #e8f3f5;
   --color-tag-bg: #eef3f5;
+  --color-surface-navy: #161d25;
+  --color-surface-navy-raised: color-mix(in srgb, var(--color-surface-navy), var(--color-bg) 7%);
+  --color-on-navy: var(--color-nav-text);
+  --color-on-navy-muted: color-mix(in srgb, var(--color-on-navy) 72%, transparent);
 
   /* Elevation */
   --shadow-flat: 0 1px 4px var(--color-card-shadow-faint);
