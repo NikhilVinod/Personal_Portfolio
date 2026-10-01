@@ -5,15 +5,15 @@
 :root {
   /* Colors */
   --color-text: #0b0e11;
-  --color-text-muted: #222;
-  --color-text-muted-light: #555;
+  --color-text-muted: #2f4250;
+  --color-text-muted-light: #3a4d59;
   --color-tag-text: #24485a;
   --color-bg: #fff;
   --color-bg-page: #ffffff;
-  --color-nav: #2C6777;
-  --color-nav-sidebar-start: #337a88;
-  --color-nav-sidebar-mid: #2C6777;
-  --color-nav-sidebar-end: #28606e;
+  --color-nav: #3d6878;
+  --color-nav-sidebar-start: #447b89;
+  --color-nav-sidebar-mid: #3d6878;
+  --color-nav-sidebar-end: #39616f;
   --color-nav-text: #fff;
   --color-nav-text-hover: #e8f4f5;
   --color-border: #e1e7ed;
@@ -30,6 +30,7 @@
   --color-icon-stroke: #6b7a8d;
   --color-panel-highlight: rgba(200, 216, 229, 0.25);
   --color-surface-subtle: #f2f6f8;
+  --color-home-accent: #d3e3e8;
   --color-text-secondary: #3a4d59;
 
   /* Spacing */
