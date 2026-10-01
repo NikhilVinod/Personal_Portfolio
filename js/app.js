@@ -17,6 +17,7 @@
     if (panel) return panel;
 
     const pathname = window.location.pathname;
+    // Detect asset root: pages/ dev files and clean-URL subfolders both sit one level below root.
     const imgBase = (/\/pages\//.test(pathname) || /\/(about|experience|projects)\//.test(pathname)) ? '../' : '';
 
     panel = document.createElement('section');
