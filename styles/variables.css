@@ -29,6 +29,8 @@
   --color-icon-bg: #e8ecf0;
   --color-icon-stroke: #6b7a8d;
   --color-panel-highlight: rgba(200, 216, 229, 0.25);
+  --color-surface-subtle: #f2f6f8;
+  --color-text-secondary: #3a4d59;
 
   /* Spacing */
   --space-xs: 0.25rem;
