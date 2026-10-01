@@ -9,7 +9,6 @@
   --color-text-muted-light: #3a4d59;
   --color-tag-text: #24485a;
   --color-bg: #fff;
-  --color-bg-page: #ffffff;
   --color-nav: #3d6878;
   --color-nav-sidebar-start: #447b89;
   --color-nav-sidebar-mid: #3d6878;
@@ -17,7 +16,6 @@
   --color-nav-text: #fff;
   --color-nav-text-hover: #e8f4f5;
   --color-border: #e1e7ed;
-  --color-border-panel: #e1e7ed;
   --color-border-card: #e4e8ed;
   --color-divider: #eaecef;
   --color-timeline-line: #d5dce4;
@@ -38,8 +36,6 @@
   --color-home-accent: #e9eff5;
   --color-highlight-bg: #e8f3f5;
   --color-tag-bg: #eef3f5;
-  --color-text-secondary: #3a4d59;
-
   /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;

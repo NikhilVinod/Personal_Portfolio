@@ -459,7 +459,7 @@ nav {
 
 .experience-page,
 .projects-page {
-  background-color: var(--color-bg-page);
+  background-color: var(--color-bg);
 }
 
 .experience-section,
@@ -574,7 +574,7 @@ nav {
 
 .projects-panel {
   background: var(--color-bg);
-  border: 2px solid var(--color-border-panel);
+  border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 28px var(--color-card-shadow-hover);
   overflow: hidden;
@@ -628,7 +628,7 @@ nav {
 .projects-panel-left {
   min-width: 260px;
   padding-right: var(--space-xl);
-  border-right: 2px solid var(--color-border-panel);
+  border-right: 2px solid var(--color-border);
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -723,7 +723,7 @@ nav {
     min-width: 0;
     padding-right: 0;
     border-right: none;
-    border-bottom: 2px solid var(--color-border-panel);
+    border-bottom: 2px solid var(--color-border);
     padding-bottom: 1.1rem;
     margin-bottom: 1.1rem;
   }
@@ -1116,7 +1116,7 @@ nav {
 
 .about-info-degree {
   font-size: var(--text-base);
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted-light);
   line-height: var(--line-height-normal);
 }
 
@@ -1128,7 +1128,7 @@ nav {
 
 .about-info-text {
   font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted-light);
   line-height: 1.5;
   margin: 0;
 }
