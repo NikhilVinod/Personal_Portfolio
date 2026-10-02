@@ -15,6 +15,7 @@
   --color-text: #0b0e11;
   --color-text-muted: #363636;
   --color-text-muted-light: #424242;
+  --color-text-subtle: color-mix(in srgb, var(--color-text-muted), var(--color-bg) 20%);
   --color-tag-text: #24485a;
   --color-bg: #fff;
   --color-nav: #3d6878;
