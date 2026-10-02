@@ -47,6 +47,9 @@
   --color-surface-navy-raised: color-mix(in srgb, var(--color-surface-navy), var(--color-bg) 7%);
   --color-on-navy: var(--color-nav-text);
   --color-on-navy-muted: color-mix(in srgb, var(--color-on-navy) 72%, transparent);
+  --color-on-navy-subtle: #C8D8E5;
+  --color-navy-inset: rgba(255, 255, 255, 0.05);
+  --color-navy-divider: rgba(255, 255, 255, 0.12);
 
   /* Elevation */
   --shadow-flat: 0 1px 4px var(--color-card-shadow-faint);
@@ -96,12 +99,15 @@
   --text-4xl: 1.6rem;
   --text-5xl: 2rem;
   --text-display: 3.5rem;
+  --text-stat: 1.75rem;
   --line-height-tight: 1;
   --line-height-normal: 1.6;
+  --line-height-stat: 1.21;
 
   /* Radii */
   --radius-sm: 8px;
   --radius-md: 12px;
+  --radius-inset: 16px;
   --radius-lg: 22px;
   --radius-full: 50%;
   --radius-pill: 999px;
