@@ -5,16 +5,15 @@
  *   480px  — small phones: tighter timeline cards
  *   600px  — projects grid goes to 1 column
  *   640px  — timeline collapses to one column; about cards/toolkit stack
- *   700px  — projects panel stacks vertically
- *   768px  — main mobile/desktop switch (max-width rules use 767px)
+ *   768px  — main mobile/desktop switch (max-width rules use 767px); featured project stacks
  *   900px  — projects grid goes to 2 columns; timeline date column narrows
  */
 
 :root {
   /* Colors */
   --color-text: #0b0e11;
-  --color-text-muted: #2f4250;
-  --color-text-muted-light: #3a4d59;
+  --color-text-muted: #363636;
+  --color-text-muted-light: #424242;
   --color-tag-text: #24485a;
   --color-bg: #fff;
   --color-nav: #3d6878;
@@ -44,6 +43,15 @@
   --color-home-accent: #e9eff5;
   --color-highlight-bg: #e8f3f5;
   --color-tag-bg: #eef3f5;
+  --color-surface-navy: #161d25;
+  --color-surface-navy-raised: color-mix(in srgb, var(--color-surface-navy), var(--color-bg) 7%);
+  --color-on-navy: var(--color-nav-text);
+  --color-on-navy-muted: color-mix(in srgb, var(--color-on-navy) 72%, transparent);
+  --color-on-navy-subtle: #C8D8E5;
+  --color-navy-inset: rgba(255, 255, 255, 0.05);
+  --color-navy-divider: rgba(255, 255, 255, 0.12);
+  --color-award-fill: #E9C46A;
+  --color-award-stroke: #C79A2B;
 
   /* Elevation */
   --shadow-flat: 0 1px 4px var(--color-card-shadow-faint);
@@ -67,6 +75,7 @@
   /* Layout */
   --nav-height: 80px;
   --content-max-width: 1200px;
+  --featured-min-height: 256px;
   --nav-inner-max-width: 1400px;
   --sidebar-width: min(85vw, 320px);
   --main-margin-top: 3.5rem;
@@ -93,12 +102,18 @@
   --text-4xl: 1.6rem;
   --text-5xl: 2rem;
   --text-display: 3.5rem;
+  --text-stat: 1.75rem;
   --line-height-tight: 1;
+  --line-height-snug: 1.2;
   --line-height-normal: 1.6;
+  --line-height-stat: 1.21;
+  --letter-spacing-caps: 0.08em;
+  --icon-stroke-width: 2;
 
   /* Radii */
   --radius-sm: 8px;
   --radius-md: 12px;
+  --radius-inset: 16px;
   --radius-lg: 22px;
   --radius-full: 50%;
   --radius-pill: 999px;
