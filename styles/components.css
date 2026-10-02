@@ -494,7 +494,7 @@ nav {
   gap: var(--space-sm);
   font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--letter-spacing-caps);
   text-transform: uppercase;
   margin-bottom: var(--space-md);
 }
@@ -503,7 +503,7 @@ nav {
   font-family: var(--font-heading);
   font-size: var(--text-5xl);
   font-weight: var(--font-weight-semibold);
-  line-height: 1.2;
+  line-height: var(--line-height-snug);
   margin-bottom: var(--space-sm);
 }
 
@@ -572,7 +572,7 @@ nav {
 .icon-award {
   fill: var(--color-award-fill);
   stroke: var(--color-award-stroke);
-  stroke-width: 2;
+  stroke-width: var(--icon-stroke-width);
   stroke-linecap: round;
   stroke-linejoin: round;
   flex-shrink: 0;
@@ -849,7 +849,7 @@ nav {
   font-size: var(--text-base);
   font-weight: var(--font-weight-semibold);
   margin: 0;
-  line-height: 1.2;
+  line-height: var(--line-height-snug);
   color: var(--color-text);
 }
 
@@ -1061,7 +1061,7 @@ nav {
   font-family: var(--font-sans);
   font-size: var(--text-3xs);
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--letter-spacing-caps);
   text-transform: uppercase;
   color: var(--color-tag-text);
 }
