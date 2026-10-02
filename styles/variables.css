@@ -50,6 +50,8 @@
   --color-on-navy-subtle: #C8D8E5;
   --color-navy-inset: rgba(255, 255, 255, 0.05);
   --color-navy-divider: rgba(255, 255, 255, 0.12);
+  --color-award-fill: #E9C46A;
+  --color-award-stroke: #C79A2B;
 
   /* Elevation */
   --shadow-flat: 0 1px 4px var(--color-card-shadow-faint);
@@ -73,6 +75,7 @@
   /* Layout */
   --nav-height: 80px;
   --content-max-width: 1200px;
+  --featured-min-height: 256px;
   --nav-inner-max-width: 1400px;
   --sidebar-width: min(85vw, 320px);
   --main-margin-top: 3.5rem;
