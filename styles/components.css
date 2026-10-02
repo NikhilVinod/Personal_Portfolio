@@ -563,12 +563,6 @@ nav {
   line-height: var(--line-height-normal);
 }
 
-.projects-trophy {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
 .icon-award {
   fill: var(--color-award-fill);
   stroke: var(--color-award-stroke);
