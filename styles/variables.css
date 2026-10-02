@@ -5,8 +5,9 @@
  *   480px  — small phones: tighter timeline cards
  *   600px  — projects grid goes to 1 column
  *   640px  — timeline collapses to one column; about cards/toolkit stack
- *   768px  — main mobile/desktop switch (max-width rules use 767px); featured project stacks
+ *   768px  — main mobile/desktop switch (max-width rules use 767px); featured stats stack
  *   900px  — projects grid goes to 2 columns; timeline date column narrows
+ *   1100px — featured project stacks (max-width rule uses 1099px)
  */
 
 :root {

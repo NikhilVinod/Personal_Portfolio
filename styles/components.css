@@ -417,15 +417,16 @@ nav {
     margin-bottom: var(--space-5xl);
   }
 
-  /* Sits the socials just above the wave's left crest, which is 17.25vw above
-     the viewport bottom given wave.svg's shape and full-width scaling. */
+  /* Padding must stay width-independent so the content doesn't drift
+     vertically as the window is resized horizontally. The extra bottom
+     padding lifts the content clear of the wave's crest on wide screens. */
   .home-page main.page-wrapper {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     min-height: calc(100vh - var(--nav-height));
     margin-top: 0;
     padding-top: var(--space-2xl);
-    padding-bottom: 17.25vw;
+    padding-bottom: calc(var(--space-2xl) + 2 * var(--space-4xl));
   }
 
   .home-page .main-section {
@@ -446,6 +447,20 @@ nav {
   .pfp {
     order: -1;
     justify-content: center;
+  }
+
+  .pfp-frame {
+    transform: none;
+  }
+
+  .pfp-ring {
+    display: none;
+  }
+
+  .pfp-img,
+  .pfp-frame:hover .pfp-img {
+    box-shadow: none;
+    transform: none;
   }
 
   .socials {
@@ -542,7 +557,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   gap: var(--space-xs);
-  padding: var(--space-xs) calc(var(--space-md) + var(--space-xs));
+  padding: var(--space-xs) var(--space-md);
 }
 
 .projects-stat + .projects-stat {
@@ -651,14 +666,32 @@ nav {
   align-self: flex-start;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1099px) {
   .projects-featured {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
-    padding: var(--space-xl) var(--space-lg);
     min-height: unset;
   }
+}
 
+@media (max-width: 767px) {
+  .projects-featured {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .projects-featured-stats {
+    grid-template-columns: 1fr;
+    padding: var(--space-xs) var(--space-lg);
+  }
+
+  .projects-stat {
+    padding: var(--space-md) 0;
+  }
+
+  .projects-stat + .projects-stat {
+    border-left: none;
+    border-top: 1px solid var(--color-navy-divider);
+  }
 }
 
 @media (max-width: 900px) {
